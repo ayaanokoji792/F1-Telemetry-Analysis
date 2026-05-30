@@ -40,7 +40,7 @@ grid_laps = clean_laps[clean_laps['driverId'] != max_id]
 print("Data cleaned. Generating upgraded visualization...")
 plt.figure(figsize=(12, 6))
 
-# Using a Histogram + KDE for a much more professional, robust look
+# Using a Histogram + KDE for a much more robust look
 sns.histplot(grid_laps['lap_time_sec'], label='Rest of the Grid', color='gray', stat='density', bins=40, alpha=0.3, kde=True, line_kws={'linewidth': 2})
 sns.histplot(max_laps['lap_time_sec'], label='Max Verstappen', color='blue', stat='density', bins=40, alpha=0.5, kde=True, line_kws={'linewidth': 2})
 
